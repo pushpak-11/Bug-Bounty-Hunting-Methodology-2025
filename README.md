@@ -98,7 +98,7 @@ python3 subbrute.py target.com -w wordlist.txt -o brute_force_subs.txt
 
 **FFuF Subdomain**
 ```bash
-ffuf -u https://FUZZ.target.com -w wordlist.txt -t 50 -mc 200,403 -o ffuf_subs.txt
+ffuf -u https://FUZZ.target.com -w wordlist.txt -t 50 -mc 200,403 -o ffuf_subs.txt , ffuf -u https://FUZZ.cognism.com/ -w /root/subFuzz_Wordlist/httparchive_subdomains_2025_12_27.txt -t 50 -mc 200,403 -o ffuf_subs.txt
 ```
 
 ### **1.3 Handling Specific (Non-Wildcard) Targets**
