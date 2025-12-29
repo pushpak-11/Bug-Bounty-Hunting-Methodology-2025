@@ -82,7 +82,8 @@ massdns -r resolvers.txt -t A -o S -w massdns_results.txt wordlist.txt
 
 **Shuffledns**
 ```bash
-shuffledns -d target.com -list all_subs.txt -r resolvers.txt -o active_subs.txt
+shuffledns -d target.com -list all_subs.txt -r resolvers.txt -o active_subs.txt , shuffledns -d cognism.com -list all_subs.txt -r /root/resolvers.txt -mode resolve -o active_subs.txt
+
 ```
 
 **DNSX Resolution**
