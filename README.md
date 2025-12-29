@@ -53,7 +53,7 @@ subfinder -d target.com -silent -all -recursive -o subfinder_subs.txt
 
 **Amass (Passive Mode)**
 ```bash
-amass enum -passive -d target.com -o amass_passive_subs.txt
+amass enum -passive -d target.com -o amass_passive_subs.txt , echo "yahoo.com" | haktrails subdomains | tee hakrails_subs.txt
 ```
 
 **CRT.sh Query**
