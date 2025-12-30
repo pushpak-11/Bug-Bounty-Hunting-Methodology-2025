@@ -176,12 +176,17 @@ cat live_websites.txt | grep -i "login\|admin" | tee login_endpoints.txt
 
 **JS Extraction**
 ```bash
-cat live_websites.txt | waybackurls | grep "\.js" | anew js_files.txt
+cat live_websites.txt | waybackurls | grep "\.js" | anew js_files.txt , cat live.txt | waybackurls | grep "\.js" | anew js_files.txt
 ```
 
 **LinkFinder Analysis**
 ```bash
-python3 linkfinder.py -i js_files.txt -o js_endpoints.txt
+python3 linkfinder.py -i js_files.txt -o js_endpoints.txt , cd /root/tools/LinkFinder
+
+while read -r js; do
+  python3 linkfinder.py -i "$js" -o cli >> /root/inti/cognism/jsfiles/js_endpoints.txt
+done < /root/inti/cognism/jsfiles/js_files.txt
+
 ```
 
 **Sensitive Pattern Search**
