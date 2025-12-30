@@ -107,22 +107,22 @@ ffuf -u https://FUZZ.target.com -w wordlist.txt -t 50 -mc 200,403 -o ffuf_subs.t
 
 **GAU**
 ```bash
-gau target.example.com | anew gau_results.txt
+gau target.example.com | anew gau_results.txt , cat live.txt | /root/go/bin/gau --threads 5 | sort -u > gau_results.txt
 ```
 
 **Waybackurls**
 ```bash
-waybackurls target.example.com | anew wayback_results.txt
+waybackurls target.example.com | anew wayback_results.txt , cat domains.txt | waybackurls > urls
 ```
 
 **Katana**
 ```bash
-katana -u target.example.com -silent -jc -o katana_results.txt
+katana -u target.example.com -silent -jc -o katana_results.txt ,  cat live.txt | katana | tee katana_results.txt
 ```
 
 **Hakrawler**
 ```bash
-echo "https://target.example.com" | hakrawler -depth 2 -plain -js -out hakrawler_results.txt
+echo "https://target.example.com" | hakrawler -depth 2 -plain -js -out hakrawler_results.txt , cat live.txt | hakrawler > hakrawler_results.txt
 ```
 
 ### **Additional Advanced Techniques**
